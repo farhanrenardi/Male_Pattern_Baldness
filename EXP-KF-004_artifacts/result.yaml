@@ -1,0 +1,117 @@
+experiment_id: EXP-KF-004
+completed_at: 2026-02-19 00:37:17 WIB
+environment:
+  platform: Google Colab (T4 GPU)
+  python_version: 3.12.12
+  tensorflow_version: 2.19.0
+config:
+  backbone: EfficientNetB3
+  image_size:
+  - 300
+  - 300
+  batch_size: 16
+  dropout: 0.4
+  warmup_epochs: 8
+  finetune_epochs: 24
+  label_smoothing: 0.0
+  swa_enabled: true
+results:
+  validation:
+    accuracy: 0.8814229369163513
+    loss: 0.12835590541362762
+    macro_f1: 0.8887128904336902
+    per_class:
+      '1':
+        precision: 0.8811188811188811
+        recall: 0.8811188811188811
+        f1: 0.8811188811188811
+        support: 143
+      '2':
+        precision: 0.8041237113402062
+        recall: 0.7572815533980582
+        f1: 0.78
+        support: 103
+      '3':
+        precision: 0.9158878504672897
+        recall: 0.9245283018867925
+        f1: 0.92018779342723
+        support: 106
+      '4':
+        precision: 0.8888888888888888
+        recall: 0.9333333333333333
+        f1: 0.9105691056910569
+        support: 60
+      '5':
+        precision: 0.972972972972973
+        recall: 0.9230769230769231
+        f1: 0.9473684210526315
+        support: 39
+      '6':
+        precision: 0.7727272727272727
+        recall: 0.85
+        f1: 0.8095238095238095
+        support: 20
+      '7':
+        precision: 0.9459459459459459
+        recall: 1.0
+        f1: 0.9722222222222222
+        support: 35
+  test:
+    accuracy: 0.8669354915618896
+    loss: 0.146661177277565
+    macro_f1: 0.8964014854933703
+    per_class:
+      '1':
+        precision: 0.9130434782608695
+        recall: 0.8873239436619719
+        f1: 0.9
+        support: 71
+      '2':
+        precision: 0.7804878048780488
+        recall: 0.6274509803921569
+        f1: 0.6956521739130435
+        support: 51
+      '3':
+        precision: 0.78125
+        recall: 0.9433962264150944
+        f1: 0.8547008547008547
+        support: 53
+      '4':
+        precision: 0.8888888888888888
+        recall: 0.9230769230769231
+        f1: 0.9056603773584906
+        support: 26
+      '5':
+        precision: 0.9444444444444444
+        recall: 1.0
+        f1: 0.9714285714285714
+        support: 17
+      '6':
+        precision: 1.0
+        recall: 0.9
+        f1: 0.9473684210526315
+        support: 10
+      '7':
+        precision: 1.0
+        recall: 1.0
+        f1: 1.0
+        support: 20
+  overfit_check:
+    train_accuracy: 0.9798580408096313
+    best_val_accuracy: 0.8972331881523132
+    train_val_gap: 0.08262485265731812
+    status: ALERT
+  rejection:
+    validation_rejection_rate: 22.727272727272727
+    test_rejection_rate: 19.35483870967742
+acceptance_criteria:
+  target_test_accuracy: 0.93
+  max_train_val_gap: 0.03
+analysis:
+  worst_class:
+    name: '2'
+    recall: 0.6274509803921569
+  recommendations:
+  - 'CRITICAL: Class 2 has recall 62.75%. Consider class weights or focal loss.'
+  - Overfitting detected (gap=8.26%). Increase regularization.
+  - Test accuracy < 90%. Consider stronger augmentation or backbone upgrade.

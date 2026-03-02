@@ -1,0 +1,117 @@
+class_analyzed: '2'
+validation:
+  total_samples: !!python/object/apply:numpy._core.multiarray.scalar
+  - &id001 !!python/object/apply:numpy.dtype
+    args:
+    - i8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    ZwAAAAAAAAA=
+  recall: !!python/object/apply:numpy._core.multiarray.scalar
+  - &id002 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    +602hqY76D8=
+  error_breakdown:
+    '1':
+      count: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        EQAAAAAAAAA=
+      percentage: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        S87LIj6BMEA=
+    '3':
+      count: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        BgAAAAAAAAA=
+      percentage: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        D/ZbbQxNF0A=
+    '4':
+      count: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AQAAAAAAAAA=
+      percentage: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        E0gl52UR7z8=
+    '7':
+      count: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AQAAAAAAAAA=
+      percentage: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        E0gl52UR7z8=
+  high_conf_error_ratio: 0.28
+test:
+  total_samples: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id001
+  - !!binary |
+    MwAAAAAAAAA=
+  recall: !!python/object/apply:numpy._core.multiarray.scalar
+  - *id002
+  - !!binary |
+    FBQUFBQU5D8=
+  error_breakdown:
+    '1':
+      count: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        BgAAAAAAAAA=
+      percentage: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        h4eHh4eHJ0A=
+    '3':
+      count: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        DAAAAAAAAAA=
+      percentage: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        h4eHh4eHN0A=
+    '4':
+      count: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id001
+      - !!binary |
+        AQAAAAAAAAA=
+      percentage: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        X19fX19f/z8=
+  high_conf_error_ratio: 0.2631578947368421
+diagnosis: BOUNDARY_AMBIGUITY
+recommendations:
+- '1. CLARIFY CRITERIA: Sharpen Class 2 definition'
+- '2. FOCAL LOSS: Use focal loss to handle boundary cases'
+- '3. AUGMENT: Add augmentation targeting Class 2 characteristics'
