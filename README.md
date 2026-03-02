@@ -1,3 +1,13 @@
+---
+title: Male Pattern Baldness Demo
+emoji: 🧑‍⚕️
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+---
 # Male Pattern Baldness
 
 This small Streamlit application allows you to upload an image of a scalp and get a prediction of the baldness level (1–7) along with the confidence score.
