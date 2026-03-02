@@ -17,5 +17,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add space https://huggingface.co/spaces/farhanrenardi/Male_Pattern_Baldness || true
-          git push --force https://farhanrenardi:$HF_TOKEN@huggingface.co/spaces/farhanrenardi/Male_Pattern_Baldness main
+          git remote add space https://huggingface.co/spaces/hunsolooo/Male_Pattern_Baldness || true
+          git push --force https://farhanrenardi:$HF_TOKEN@huggingface.co/spaces/hunnsolooo/Male_Pattern_Baldness main
