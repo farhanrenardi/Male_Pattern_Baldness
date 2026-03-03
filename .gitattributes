@@ -1,1 +1,2 @@
 *.h5 filter=lfs diff=lfs merge=lfs -text
+EXP-KF-004_artifacts/*.h5 filter=lfs diff=lfs merge=lfs -text
