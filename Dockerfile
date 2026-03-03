@@ -1,6 +1,16 @@
 # Gunakan base Python (bisa upgrade ke slim kalau mau ringan)
 FROM python:3.10-slim
 
+# Install dependencies sistem untuk OpenCV (Dijalankan sebagai root)
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libxcb1 \
+    && rm -rf /var/lib/apt/lists/*
+
 # Buat user non-root (wajib di HF Spaces)
 RUN useradd -m -u 1000 user
 USER user
