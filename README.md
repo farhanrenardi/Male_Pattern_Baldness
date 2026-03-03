@@ -1,6 +1,6 @@
 ---
 title: Male Pattern Baldness Demo
-emoji: 🧑‍⚕️
+emoji: 🧑🏻‍🦲
 colorFrom: blue
 colorTo: purple
 sdk: docker
